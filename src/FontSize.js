@@ -46,3 +46,49 @@ window.onload = function () {
 	// 	win.addEventListener(resizeEvt, recalc, false)
 	// 	doc.addEventListener('DOMContentLoaded', recalc, false)
 	// })(document, window)
+
+
+	//胡浩    事件监听的兼容性写法
+    // var addEvent=function(elements,type,callback){
+ 	//   if(elements.addEventListener){
+ 	//        elements.addEventListener(elements,type,false)
+ 	//    }else if(elements.attachEvent){
+ 	//        elements.attachEvent("on"+type,callback)
+ 	//    };
+ 	// };
+
+
+	// win.addEventListener("resizeEvt", function() {
+	// 	clearTimeout(tid); //防止执行两次
+	// 	tid = setTimeout(recalc, 200);
+	// }, false);
+
+	// 防止有些未知bug。load之后再调用一次。
+	// window.addEventListener( 'load' , recalc , false ); 
+	
+
+	// 	防止某些机型怪异现象，异步再调用一次
+	// setTimeout(function(){
+	// 	recalc(); 
+	// },200)
+	
+
+
+	//赵骏华
+	//该如何考虑到达一定宽度时，是否改变进行访问页面方式，是pc端还是手机端？
+	//在pc端中谷歌浏览器的最小字体是12px,而其他浏览器却不是，该如何解决？
+	// window.onresize = function () {
+	// 		getWindowSize();
+	// 		//当页面宽度到达一定值是，是否考虑已经不是手机端，而是pc端，是否计算方法也就不同？
+	// 				if(pageWidth > 640) {
+	// 						pageWidth = 640;
+	// 						document.documentElement.style.fontSize = pageWidth / 6.4 + "px";
+	// 						}		
+	// 				else{		
+	// 					document.documentElement.style.fontSize = pageWidth / 100 + "px";
+	// 				}
+	// 	}
+
+
+
+
